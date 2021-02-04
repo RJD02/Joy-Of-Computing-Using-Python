@@ -1,4 +1,4 @@
-def damnIt(n):
+def fizzBuzz(n):
     for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
             print(i,'FizzBuzz')
@@ -9,4 +9,5 @@ def damnIt(n):
         else:
             print(i)
 
-print(damnIt(50))
+n = int(input())
+print(fizzBuzz(n))
