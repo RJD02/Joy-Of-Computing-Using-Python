@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Feb  4 12:28:17 2021
-
-@author: Dulange
+Theory of evolution, we have a data containg 0s and 1s. We need to interpret if the data provided has a chance
+of evolving or not based on given condition.
 """
 import random
 
