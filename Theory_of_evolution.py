@@ -1,13 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-<<<<<<< HEAD
 Theory of evolution, we have a data containing 0s and 1s. We need to interpret if the data provided has a chance
 of evolving or not based on given condition.
-=======
-Created on Thu Feb  4 12:28:17 2021
-
-@author: Dulange
->>>>>>> parent of 9186875 (Week 3 Program Theory of evolution)
 """
 import random
 
