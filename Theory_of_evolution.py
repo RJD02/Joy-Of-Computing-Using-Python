@@ -1,6 +1,6 @@
 """
 Theory of evolution, we have a data containing 0s and 1s. We need to interpret if the data provided has a chance
-of evolving or not based on given condition.
+.of evolving or not based on given condition.
 """
 import random
 
