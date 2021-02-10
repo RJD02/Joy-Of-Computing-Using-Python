@@ -48,6 +48,7 @@ def solve(l):
     # print(max[len(max) - 2], min[len(min) - 1])
     return max[len(max) - 2] + min[len(min) - 1]
 
+n = input()
 l = list(input().split(" "))
 l = giveMeInteger(l)
 l = removeRepeated_2(l)
