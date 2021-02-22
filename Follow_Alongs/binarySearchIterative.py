@@ -15,9 +15,6 @@ def binarySearch(A, key):
 l = list(input().split(" "))
 for i in range(len(l)):
     l[i] = int(l[i])
-# print(l)
-key = int(input())
-print('Value', key, 'in array')
 l.sort()
-print(l)
-print('is at postition', binarySearch(l, key) + 1)
+key = int(input())
+print('Value ', key, ' in array', '\n', l, ' is at position: \n', binarySearch(l, key) + 1, sep="")
