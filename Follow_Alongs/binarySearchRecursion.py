@@ -1,10 +1,7 @@
 # Binary Search using Recursion
 def binarySearch(A, key, start, end):
-    if start == end:
-        if A[start] == key:
-            return start
-        else:
-            return -1
+    if start > end:
+        return -1
     mid = start + (end - start) // 2
     if A[mid] < key:
         return binarySearch(A, key, mid + 1, end)
@@ -20,7 +17,8 @@ for i in range(len(l)):
 l.sort()
 key = int(input())
 print('Sorted list is:', l, '\nValue', key, 'is at position')
-try:
+if binarySearch(l, key, 0, len(l)) == -1:
+    print("Value doesn't exist in the list")
+else:
     print(1 + binarySearch(l, key, 0, len(l)))
-except RecursionError:
-    print(-1)
+    
