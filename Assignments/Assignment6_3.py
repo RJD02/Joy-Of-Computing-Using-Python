@@ -34,12 +34,12 @@ def main(str1):
     # str1 =I "".join(reversed(str1))
     str2 = ""
     for i in str1:
-        str2 += str((int(i) - 3) % 26)
-    print(str1)
+        str2 += chr((ord(i) - 3 + 65) % 26 + 65)
+    print(str2)
     
 
 str1 = input()
 str1 = "".join(reversed(str1))
-print(str1)
-print(int(str1[0]))
-# main(str1)
+# print(str1)
+# print(ord(str1[0]))
+main(str1)
