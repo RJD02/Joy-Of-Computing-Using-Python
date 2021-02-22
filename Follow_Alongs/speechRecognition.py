@@ -1,5 +1,6 @@
 def run():
     import speech_recognition as sr
+    # Can change "back-in-black-official-video.wav" to any .wav file on your computer
     AUDIO_FILE = ("back-in-black-official-video.wav")
     #User audio
     r = sr.Recognizer() # Initialize the recognizer
