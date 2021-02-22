@@ -40,6 +40,4 @@ def main(str1):
 
 str1 = input()
 str1 = "".join(reversed(str1))
-# print(str1)
-# print(ord(str1[0]))
 main(str1)
