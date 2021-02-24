@@ -65,7 +65,6 @@ def encryptFromInput(line, shift):
         else:
             data += line[i]
     print('Encrypted Form:',data)
-    #  print("The program ends here")
 
 def main():
     print('Want me to take input from file or will you give me an input?')
