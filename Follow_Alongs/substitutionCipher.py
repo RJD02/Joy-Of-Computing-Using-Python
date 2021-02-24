@@ -82,4 +82,4 @@ def main():
         encryptFromInput(line, key)
         decryptFromInput(line, key)
 
-main() #  Kinda like OOP(C/C++/Java)
+main()
