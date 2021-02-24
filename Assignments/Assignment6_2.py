@@ -3,7 +3,8 @@ Question:
     Anagrams
 Given two strings as input, determine if they are anagrams are not. (Ignore the spaces, case and any punctuation
 or special characters)
-Note: Anagrams are the strings which are made up of the same set of letters. For example : Mary and Army are 
+Note: Anagrams are the strings which are made up of the same set of letters. For
+example : Mary and Army are
 anagrams.
 
 Input Format
@@ -31,20 +32,14 @@ punct = string.punctuation
 punct += ' '
 # print(punct)
 
-def found(char):
-    for i in punct:
-        if i == char:
-            return True
-    return False
-
 def main(str1, str2):
     res1 = ""
     res2 = ""
     for i in str1:
-        if not found(i):
+        if not (i in punct):
             res1 += i
     for i in str2:
-        if not found(i):
+        if not (i in punct):
             res2 += i
     res1 = res1.lower(); res2 = res2.lower()
     res1 = ''.join(sorted(res1))
