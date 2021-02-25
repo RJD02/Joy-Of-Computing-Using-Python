@@ -9,9 +9,9 @@ def binarySearch(A, key, start, end):
         return binarySearch(A, key, start, mid - 1)
     elif A[mid] == key:
         return mid
-    
+
 # l = [x for x in range(1, 10000000)]
-l = list(input().split(" "))
+l = list(input().split(" ")) #  Input
 for i in range(len(l)):
     l[i] = int(l[i])
 l.sort()
@@ -21,4 +21,4 @@ if binarySearch(l, key, 0, len(l)) == -1:
     print("Value doesn't exist in the list")
 else:
     print(1 + binarySearch(l, key, 0, len(l)))
-    
+
