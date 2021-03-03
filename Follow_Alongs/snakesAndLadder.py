@@ -88,7 +88,7 @@ def play():
         if turn % 2 == 0: #  Player 1 turn
             print(pl1_name, "it's your turn")
             #  Ask player whether player wants to continue
-            c = int( input('Enter 1 to continue, 0 to quit'))
+            c = int( input('Enter 1 to continue, 0 to quit: '))
             if c == 0:
                 result(pl1_name, pl2_name, points1, points2)
                 break
@@ -108,7 +108,7 @@ def play():
         else:
             print(pl2_name," it's your turn")
             #  Ask player whether player wants to continue
-            c = int( input('Enter 1 to continue, 0 to quit'))
+            c = int( input('Enter 1 to continue, 0 to quit: '))
             if c == 0:
                 result(pl1_name, pl2_name, points1, points2)
                 break
@@ -125,6 +125,7 @@ def play():
                 print(pl2_name, 'won')
                 result(pl1_name, pl2_name, points1, points2)
                 break
+        print('-' * 21)
         turn += 1
 
 
