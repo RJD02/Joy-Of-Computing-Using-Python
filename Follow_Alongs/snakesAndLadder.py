@@ -125,7 +125,7 @@ def play():
                 print(pl2_name, 'won')
                 result(pl1_name, pl2_name, points1, points2)
                 break
-        print('-' * 21)
+        print('-' * 41)
         turn += 1
 
 
