@@ -2,7 +2,7 @@ from PIL import Image
 import random
 end = 100
 
-def result(): #  Shows end result of player 1 and 2
+def result(pl1_name, pl2_name, points1, points2): #  Shows end result of player 1 and 2
     print(pl1_name, 'scored', points1)
     print(pl2_name, 'scored', points2)
     print('Quitting the game, Thanks for playing')
@@ -22,7 +22,7 @@ def s():
     print('Oh no Snake!')
     return
 
-def checkladder(points):
+def checkLadder(points):
     if points == 1:
         l()
         return 38
@@ -90,7 +90,7 @@ def play():
             #  Ask player whether player wants to continue
             c = int( input('Enter 1 to continue, 0 to quit'))
             if c == 0:
-                result()
+                result(pl1_name, pl2_name, points1, points2)
                 break
             #  Generate a random number representing, rollin of a dice
             dice = random.randint(1, 6)
@@ -103,14 +103,14 @@ def play():
             print(pl1_name, 'your score is: ', points1)
             if reachedEnd(points1):
                 print(pl1_name, 'won')
-                result()
+                result(pl1_name, pl2_name, points1, points2)
                 break
         else:
-            print(pl1_name," it's your turn")
+            print(pl2_name," it's your turn")
             #  Ask player whether player wants to continue
             c = int( input('Enter 1 to continue, 0 to quit'))
             if c == 0:
-                result()
+                result(pl1_name, pl2_name, points1, points2)
                 break
             #  Generate a random number representing, rollin of a dice
             dice = random.randint(1, 6)
@@ -123,7 +123,7 @@ def play():
             print(pl1_name, 'your score is: ', points2)
             if reachedEnd(points2):
                 print(pl2_name, 'won')
-                result()
+                result(pl1_name, pl2_name, points1, points2)
                 break
         turn += 1
 
