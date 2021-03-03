@@ -47,7 +47,7 @@ def checkladder(points):
     if points == 88:
         l()
         return 99
-    return points
+    return points #  Not a ladder
 
 def checkSnake(points):
     if points == 32:
@@ -71,7 +71,10 @@ def checkSnake(points):
     if points == 97:
         s()
         return 78
-    return points
+    return points #  Not a snake
+
+def reachedEnd(points):
+    return points == end
 
 def play():
     #  Asking players for their name
