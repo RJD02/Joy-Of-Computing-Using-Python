@@ -1,29 +1,47 @@
-def spiral(mat, row, col): #  mat = Matrix(list of list), row = number of rows, col = number of columns
+import turtle
+
+
+turtle.bgcolor("black")
+leo = turtle.Turtle() #  As in Teenage Mutant Ninja Turtles
+width = 5
+height = 7
+dist = 25
+leo.setpos(-250, 250)
+
+
+def spiral(row, col): #  mat = Matrix(list of list), row = number of rows, col = number of columns
     r, c = 0, 0
+    flag = 0
+    leo.color("white")
     while r < row and c < col:
+        if flag == 1:
+            leo.right(90) #  Rotating leo by 90 degrees
         for i in range(c, col): #  Printing the first row from remaining rows
-            print(mat[r][i], end = " ")
+            leo.forward(dist)
+            #  print(mat[r][i], end = " ")
         r += 1
+        flag = 1
+        leo.right(90)
         for i in range(r, row): #  Printing the last column from remaining cloumn
-            print(mat[i][col - 1], end = " ")
+            leo.forward(dist)
+            #  print(mat[i][col - 1], end = " ")
         col -= 1
+        leo.right(90)
         if r < row:
             for i in range(col - 1, c - 1, -1):
-                print(mat[row - 1][i], end = " ")
+                leo.forward(dist)
+                #  print(mat[row - 1][i], end = " ")
             row -= 1
+        leo.right(90)
         if c < col:
             for i in range(row - 1, r - 1, -1):
-                print(mat[i][c], end = " ")
+                leo.forward(dist)
+                #  print(mat[i][c], end = " ")
             c += 1
+    return
 
-
-count = 1
-#  mat = [[i for i in range(4)] for j in range(4)]
-mat = []
-for i in range(4):
-    mat.append([])
-    for ii in range(4):
-        mat[i].append(count)
-        count += 1
-print(mat)
-spiral(mat, 4, 4)
+def main():
+    #  n = int(input())
+    spiral(20, 20)
+    return
+main()
