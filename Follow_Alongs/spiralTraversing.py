@@ -18,7 +18,7 @@ def spiral(row, col): #  mat = Matrix(list of list), row = number of rows, col =
         if flag == 1:
             leo.right(90) #  Rotating leo by 90 degrees
         for i in range(c, col): #  Printing the first row from remaining rows
-            leo.color("orange")
+            leo.color("red")
             leo.forward(dist)
             #  print(mat[r][i], end = " ")
         r += 1
@@ -39,7 +39,7 @@ def spiral(row, col): #  mat = Matrix(list of list), row = number of rows, col =
         leo.right(90)
         if c < col:
             for i in range(row - 1, r - 1, -1):
-                leo.color("green")
+                leo.color("pink")
                 leo.forward(dist)
                 #  print(mat[i][c], end = " ")
             c += 1
