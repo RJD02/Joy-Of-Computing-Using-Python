@@ -1,6 +1,6 @@
 def rockPaperScissor(num1, num2, bit1, bit2):
-    p1 = int(num1[bit1]) % 3
-    p2 = int(num2[bit2]) % 3
+    p1 = int(num1[bit1 % 3])
+    p2 = int(num2[bit2 % 3])
     if player1[p1] == player2[p2]:
         print('Draw')
     elif player1[p1] == 'Rock' and player2[p2] == 'Scissor':
