@@ -3,11 +3,11 @@ import random
 
 
 def forUser(n):
+    account = 0
     for i in range(n):
         bet = int(input('Your bet from 1 to 10'))
         lucky_draw = random.randint(1, 10)
         print(lucky_draw)
-        account = 0
         if bet == lucky_draw:
             account += 900 - 100
         else:
@@ -15,13 +15,13 @@ def forUser(n):
         print(account)
     return
 
-def forMachine(n):
+def forMachine(n): 
+    account = 0
     for i in range(n):
         bet = random.randint(1, 10)
         lucky_draw = random.randint(1, 10)
         print('Bet ', bet)
         print('Lucky draw:', lucky_draw)
-        account = 0
         if bet == lucky_draw:
             account += 900 - 100
         else:
