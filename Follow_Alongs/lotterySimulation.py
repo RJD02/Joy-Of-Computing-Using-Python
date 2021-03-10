@@ -1,10 +1,13 @@
 #  You can use infinity in python using float('inf')
 import random
+import matplotlib.pyplot as my_pp
 
-
+x = []
+y = []
 def forUser(n):
     account = 0
     for i in range(n):
+        x.append(i + 1)
         bet = int(input('Your bet from 1 to 10'))
         lucky_draw = random.randint(1, 10)
         print(lucky_draw)
@@ -12,12 +15,14 @@ def forUser(n):
             account += 900 - 100
         else:
             account -= 100
+        y.append(account)
         print(account)
     return
 
 def forMachine(n): 
     account = 0
     for i in range(n):
+        x.append(i + 1)
         bet = random.randint(1, 10)
         lucky_draw = random.randint(1, 10)
         print('Bet ', bet)
@@ -26,6 +31,7 @@ def forMachine(n):
             account += 900 - 100
         else:
             account -= 100
+        y.append(account)
         print('Amount in your game account:', account)
     return 
 
@@ -36,3 +42,5 @@ if choice == 'A':
 else:
     forUser(n)
 print('This session ends here')
+my_pp.plot(x, y)
+my_pp.show()
