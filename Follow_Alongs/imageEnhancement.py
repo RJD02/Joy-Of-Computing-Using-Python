@@ -17,6 +17,6 @@ enh_image = clahe.apply(gray_image)
 
 #  Save it in a file
 #  cv2.imwrite('kids-room-enhanced.jpg', enh_image)
-cv2.imwrite(file_name[:-4] + '-enhanced' + file_name[-4:])
+cv2.imwrite(file_name[:-4] + '-enhanced' + file_name[-4:], enh_image)
 
 print('Done enhancing')
