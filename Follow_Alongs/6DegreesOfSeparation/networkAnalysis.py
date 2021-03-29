@@ -18,3 +18,8 @@ print(G.edges())
 nx.draw(G)
 # Plotting on graph
 plt.show()
+
+# Using complete_graph method
+H = nx.complete_graph(10)
+nx.draw(H)
+plt.show()
