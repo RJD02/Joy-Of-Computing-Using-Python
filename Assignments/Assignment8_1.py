@@ -11,4 +11,16 @@ def solve():
     print('Yes')
     return
 
+def solve():
+    row, col = map(int, input().split(" "))
+    mat = [list(map(int, input().split())) for i in range(m)]
+    for i in range(row):
+        for j in range(col):
+            if mat[i][j] != 0 and mat[i][j] != 1:
+                print('No')
+                break
+    else:
+        print('Yes')
+    return
+
 solve()
