@@ -29,23 +29,14 @@ def getRepeatedCount(l):
 
 def solve(l):
     l.sort()
-    # print("l is",l)
     min = [l[-1]]#Assign it a list
     max = [l[0]]#Assign it a list
-    # scnd_min, scnd_max
     i = 0
     for i in range(1,len(l)):
         if l[i] > max[len(max) - 1]:
-            # scnd_max = max
             max.append(l[i])
         if l[i] < min[len(min) - 1]:
-            # scnd_min = min
             min.append(l[i])
-    # else:
-        # scnd_max, scnd_min = max, min
-    # print("Max array", max)
-    # print("Min array", min)
-    # print(max[len(max) - 2], min[len(min) - 1])
     return max[len(max) - 2] + min[len(min) - 1]
 
 n = input()
