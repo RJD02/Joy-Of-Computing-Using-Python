@@ -1,3 +1,10 @@
+'''
+Consider a directed graph. It can be represented by an adjacency matrix. The nodes are numbered 1 to n. 
+If there is an edge from node i to node j, there will be a 1 in the (i-1,j-1) position in the adjacency matrix. 
+There are no self loops in the graph. print yes if the given graph is a complete graph (connection from one node 
+to all other node) else print no
+'''
+
 def solve():
     n = int(input())
     matrix = [[] for i in range(n)]
@@ -15,7 +22,6 @@ def solve():
                 print('no')
                 return
     print('yes')
-    #  print(matrix)
     return
 
 solve()
