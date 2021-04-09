@@ -1,3 +1,26 @@
+'''
+Given a list of numbers (integers),
+find the sum of second maximum and second minimum in this list.
+
+Input Format
+
+The first line contains numbers separated by a space.
+
+Output Format
+
+Print the sum of second maximum and second minimum
+
+Example
+
+Input
+
+2 3 5 4 7 6
+
+Output
+
+9
+'''
+
 def removeRepeated_2(l):
     l1 = l[:]
     l1.reverse()
