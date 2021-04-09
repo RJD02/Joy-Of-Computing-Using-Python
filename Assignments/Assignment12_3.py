@@ -1,4 +1,31 @@
 '''
+Consider a triangle PQR, ∡PQR is 90o  . X is the midpoint of the line PR. Given the input the lengths of PQ and PR find the angle ∡XQR. 
+
+Input Format:
+
+Line 1 - Length of side PQ
+
+Line 2 - Length of side PR
+
+
+Output Format:
+
+angle ∡XQR in degrees. Round to the nearest integer.
+
+
+Example:
+
+Input
+
+10
+
+10
+
+Output
+
+45
+
+Solution: 
     R
     |\
     |  \ 
