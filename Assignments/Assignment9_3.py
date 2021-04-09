@@ -1,3 +1,22 @@
+'''
+Remove Vowels
+Given a string s, remove all the vowels in s and reprint the string. The order of other characters in the string should be maintained\\
+
+Input Format
+A single line of the input contains a stirng s.
+
+Output Format
+Print the modified string after removing the vowels
+
+Example:
+
+Input:
+abcdEfghi
+
+Output:
+bcdfgh
+'''
+
 def solve():
 	line = input()
 	res = ""

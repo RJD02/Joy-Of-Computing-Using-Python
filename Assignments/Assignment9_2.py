@@ -1,3 +1,23 @@
+'''
+Panagrams
+Given an English sentence, check whether it is a panagram or not. A panagram is a sentence containing all 26 letters in the English alphabet.
+
+Input Format
+A single line of the input contains a stirng s.
+Output Format
+Print Yes or No
+
+Example:
+Input:
+The quick brown fox jumps over a lazy dog
+Output:
+Yes
+Input:
+The world will be taken over by AI
+Output:
+No
+'''
+
 def solve():
 	line = input()
 	line = "".join(line.split())
