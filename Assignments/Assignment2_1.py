@@ -1,3 +1,25 @@
+'''
+Write a program in python to read the integer number as input  and print the same.
+
+Input
+
+The input will contain only one number.
+
+Output
+
+Output the same number.
+
+Example
+
+Input
+
+10
+
+Output
+
+10
+'''
+
 def check(n):
     if n % 10 != 4:
         return True
@@ -5,8 +27,7 @@ def check(n):
         return False
 
 str = input()
-# li = []
-# j = 0
+
 for i in str:
     if i == " ":
         continue
