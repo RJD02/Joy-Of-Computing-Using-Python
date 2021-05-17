@@ -9,7 +9,7 @@ products = []
 prices = []
 ratings = []
 # defaultUrl = "https://www.flipkart.com/search?q=laptops&as=on&as-show=on&otracker=AS_Query_TrendingAutoSuggest_4_0_na_na_na&otracker1=AS_Query_TrendingAutoSuggest_4_0_na_na_na&as-pos=4&as-type=TRENDING&suggestionId=laptops&requestId=b49611cd-5f21-4e00-a591-13ff06c67f1e"
-url = sys.argv[0]
+url = sys.argv[1]
 driver.get(url)
 content = driver.page_source
 soup = BeautifulSoup(content, 'html.parser')
