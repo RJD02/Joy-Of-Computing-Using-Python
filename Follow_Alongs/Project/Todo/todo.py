@@ -1,5 +1,6 @@
 import os
 
+
 def getCount():
     count = 0
     if os.path.getsize('todo.txt') == 0:
@@ -11,24 +12,31 @@ def getCount():
             line = file.readline()
     return count
 
+
 def showTasks():
     if os.path.getsize('todo.txt') == 0:
         print('No tasks left, enjoy the day or add new ones')
+        return 0
     with open('todo.txt', 'r') as file:
         line = file.readline()
         while line:
             print(line)
             line = file.readline()
-    return
+    return 1
+
 
 def writeToHistory(completed_task):
     with open('todo_history.txt', 'a') as hist:
         hist.write(completed_task[3:])
     return
 
+
 def deleteTask():
-    showTasks()
-    task_number = int(input('Enter the number of the task which you want to delete: '))
+    if(showTasks() == 0):
+        print('Nothing to be deleted')
+        return
+    task_number = int(
+        input('Enter the number of the task which you want to delete: '))
     if task_number > getCount() + 1:
         print('Invalid task number')
         return
@@ -46,8 +54,11 @@ def deleteTask():
         showTasks()
         return
 
+
 def markComplete():
-    showTasks()
+    if(not showTasks()):
+        print('Nothing to be marked as complete')
+        return
     task_number = int(input('Enter the number of the task which you have completed: '))
     if task_number > getCount() + 1:
         print('Invalid task number')
