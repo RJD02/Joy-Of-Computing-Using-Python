@@ -32,7 +32,7 @@ def writeToHistory(completed_task):
 
 
 def deleteTask():
-    if(showTasks() == 0):
+    if(not showTasks()):
         print('Nothing to be deleted')
         return
     task_number = int(
