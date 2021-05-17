@@ -100,26 +100,30 @@ def showHistory():
     return
 
 def menu():
-    print('Hi there, what do you want to do this time?')
-    print('Please go through the following options: ')
-    print('1. Add a task to todo list')
-    print('2. Mark a task as complete')
-    print('3. Delete a task(I suggest you to complete it)')
-    print('4. Show the existing todo list')
-    print('5. See the history')
-    choice = int(input('Enter your choice here: '))
-    if choice == 1:
-        addTask()
-    elif choice == 2:
-        markComplete()
-    elif choice == 3:
-        deleteTask()
-    elif choice == 4:
-        showTasks()
-    elif choice == 5:
-        showHistory()
-    else:
-        print('Invalid choice')
+    choice = -1
+    while choice != 6:
+        print('Hi there, what do you want to do this time?')
+        print('Please go through the following options: ')
+        print('1. Add a task to todo list')
+        print('2. Mark a task as complete')
+        print('3. Delete a task(I suggest you to complete it)')
+        print('4. Show the existing todo list')
+        print('5. See the history')
+        print('6. Exit')
+        choice = int(input('Enter your choice here: '))
+        if choice == 1:
+            addTask()
+        elif choice == 2:
+            markComplete()
+        elif choice == 3:
+            deleteTask()
+        elif choice == 4:
+            showTasks()
+        elif choice == 5:
+            showHistory()
+        else:
+            print('Invalid choice')
+        print(end='\n')
     return
 
 menu()
